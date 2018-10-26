@@ -19,5 +19,5 @@
         <activity android:name=".Gallary" />
         <activity android:name=".Search"></activity>
     </application>
-
+    <uses-permission android:name="android.permission.CAMERA"> </uses-permission>
 </manifest>
