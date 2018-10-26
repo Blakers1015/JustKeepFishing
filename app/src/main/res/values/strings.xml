@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Just Keep Fishing</string>
+    <string name= "button_for_camera">Camera</string>
+    <string name = "button_for_gallery">Gallery</string>
+
 </resources>
