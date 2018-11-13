@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void CameraAction(View v)
     {
-        Intent titties = getIntent();
+        Intent t = getIntent();
     }
 
 

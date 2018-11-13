@@ -10,6 +10,6 @@ public class Search extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
-        Intent titties = getIntent();
+        Intent t = getIntent();
     }
 }
