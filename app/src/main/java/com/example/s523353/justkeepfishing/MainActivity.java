@@ -44,12 +44,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         // if the result is capturing Image
         int CAMERA_CAPTURE_IMAGE_REQUEST_CODE;
-        if (requestCode == CAMERA_CAPTURE_IMAGE_REQUEST_CODE) {
-            gps = new GPSTracker(AndroidGPSTrackingActivity.this);
+        //if (requestCode == CAMERA_CAPTURE_IMAGE_REQUEST_CODE) {
+           // gps = new GPSTracker(AndroidGPSTrackingActivity.this);
 
             if (resultCode == RESULT_OK)
             {
-                previewCapturedImage();
+                //previewCapturedImage();
                 if(gps.canGetLocation())
                 {
                     double latitude = gps.getLatitude();
@@ -81,4 +81,4 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-}
+

@@ -39,11 +39,11 @@ public class ImageCaptureActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.image_capture);
+        //setContentView(R.layout.image_capture);
 
         context = getApplicationContext();
-        imgPreview = (ImageView) findViewById(R.id.imgPreview);
-        btnCapturePicture = (Button) findViewById(R.id.btnCapturePicture);
+        //imgPreview = (ImageView) findViewById(R.id.imgPreview);
+        //btnCapturePicture = (Button) findViewById(R.id.btnCapturePicture);
 
         /**
          * Capture image button click event
