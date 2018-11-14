@@ -2,6 +2,8 @@ package com.example.s523353.justkeepfishing;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.os.Environment;
+import android.provider.ContactsContract;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,10 +11,13 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import java.io.File;
+
 public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("WrongViewCast")
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -76,6 +81,16 @@ public class MainActivity extends AppCompatActivity {
                         .show();
             }
         }
+    private File mPhotoFile;
+    mPhotoFile=PhotoLab.get(getActivity()).getPhotoFile(mPhoto);
+    public File getPhotoFile(ContactsContract.CommonDataKinds.Photo photo){
+        File externalFilesDir=mContext.getExternalFilesDir(Environment.DIRECTORY_PICTURES);//getExternalStorageDirectory().toString());
+
+        if(externalFilesDir==null){
+            return null;
+        }
+        return  new File(externalFilesDir, photo.getPhotoFilename());
+    }
 
     }
 
