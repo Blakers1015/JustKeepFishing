@@ -2,16 +2,17 @@ package com.example.s523353.justkeepfishing;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+;
+import android.graphics.Bitmap;
 import android.os.Environment;
-import android.provider.ContactsContract;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import java.io.File;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,55 +45,19 @@ public class MainActivity extends AppCompatActivity {
         Intent camera = new Intent(this,Search.class);
         startActivityForResult(camera,2);
     }
-    GPSTracker gps;
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        // if the result is capturing Image
-        int CAMERA_CAPTURE_IMAGE_REQUEST_CODE;
-        //if (requestCode == CAMERA_CAPTURE_IMAGE_REQUEST_CODE) {
-           // gps = new GPSTracker(AndroidGPSTrackingActivity.this);
+// use setImageBitmap (bitmap bm) set bitmap as content of image view
 
-            if (resultCode == RESULT_OK)
-            {
-                //previewCapturedImage();
-                if(gps.canGetLocation())
-                {
-                    double latitude = gps.getLatitude();
-                    double longitude = gps.getLongitude();
-
-                    // \n is for new line
-                    Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();
-                } else {
-                    // Can't get location.
-                    // GPS or network is not enabled.
-                    // Ask user to enable GPS/network in settings.
-
-                }
-
-            } else if (resultCode == RESULT_CANCELED) {
-                // user cancelled Image capture
-                Toast.makeText(getApplicationContext(),
-                        "Cancelled", Toast.LENGTH_SHORT)
-                        .show();
-            } else {
-                // failed to capture image
-                Toast.makeText(getApplicationContext(),
-                        "Error!", Toast.LENGTH_SHORT)
-                        .show();
-            }
-        }
-    private File mPhotoFile;
-    mPhotoFile=PhotoLab.get(getActivity()).getPhotoFile(mPhoto);
-    public File getPhotoFile(ContactsContract.CommonDataKinds.Photo photo){
-        File externalFilesDir=mContext.getExternalFilesDir(Environment.DIRECTORY_PICTURES);//getExternalStorageDirectory().toString());
-
-        if(externalFilesDir==null){
-            return null;
-        }
-        return  new File(externalFilesDir, photo.getPhotoFilename());
-    }
-
-    }
+//    File path = new File(Environment.getExternalStorageDirectory(),"DCIM/Camera"); DCIM/Camera is the default storage for pictures
+//if(path.exists())
+//    {
+//        String[] fileNames = path.list();
+//    }
+//for(int i = 0; i < filename.length; i++)
+//    {
+//        Bitmap mBitmap = Bitmap.decodeFile(path.getPath()+"/"+ fileNames[i]);
+//        ///Now set this bitmap on imageview
+//    }
+}
 
 
 

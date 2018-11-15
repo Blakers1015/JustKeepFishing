@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
+
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -21,7 +21,7 @@ public class Gallery extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallary);
-        Intent titties = getIntent();
+        Intent intent = getIntent();
 
         android.widget.Gallery imgGallery = (android.widget.Gallery) findViewById(R.id.gallery);
 
@@ -74,5 +74,6 @@ public class Gallery extends AppCompatActivity {
             return imageView;
         }
     }
+
 }
 
