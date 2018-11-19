@@ -16,8 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Gallery" />
-        <activity android:name=".Search"></activity>
+        <activity android:name=".Gallery" android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity android:name=".Search" >
+        </activity>
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCaFezLHWABQEJPpz_m7U774KwP6udrg34"/>
