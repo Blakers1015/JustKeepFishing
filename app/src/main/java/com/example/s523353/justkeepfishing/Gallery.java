@@ -33,11 +33,17 @@ private ListView listSearch;
     private ArrayAdapter<String> adapter;
     private SearchView searchView;
     private MenuItem searchMenuItem;
+    //Use an ArrayList for these images since we're taking the latest images from camera
+    //and storing them in the gallery
+    //syntax is something like ArrayList <File> (file being the type of data it is)
+    //leave the ArrayList empty, it should get bigger as we take more pictures
+    //could possibly keep the stock images we have just to shorten the presentation
+    //Should use a GridView for gallery
     private Integer[] images={R.drawable.fish1,R.drawable.fish2,R.drawable.fish3,
             R.drawable.fish4,R.drawable.fish5,R.drawable.fish6, R.drawable.fish7, R.drawable.fish8};
 
-    //File path = new File(Environment.getExternalStorageDirectory(), "DCIM/Camera");
-    //String[] fileNames;
+    File path = new File(Environment.getExternalStorageDirectory(), "DCIM/Camera");
+    String[] fileNames;
 
 
     private ImageView imageview;
@@ -58,6 +64,7 @@ private ListView listSearch;
 
             }
 
+
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 Gallery.this.adapter.getFilter().filter(s);
@@ -74,7 +81,7 @@ private ListView listSearch;
 //        {
             //fileNames = path.list();
 //        }
-        //Log.d("images path",path.getPath()+"length "+path.listFiles().length);
+        Log.d("images path",path.getPath()+"length "+path.listFiles().length);
 //        Log.d("images path",path.list().toString());
 
 //        for (int i = 0; i < fileNames.length; i++)
