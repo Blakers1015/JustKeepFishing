@@ -11,12 +11,12 @@
     tools:context=".Gallery">
 
     <Gallery
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
         android:id="@+id/gallery"
-        android:layout_alignParentTop="true"
+        android:layout_width="341dp"
+        android:layout_height="323dp"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        />
+        android:layout_marginBottom="24dp" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -24,20 +24,24 @@
         android:layout_height="150dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="30dp"
-        android:src="@drawable/fish1"
-        />
+        android:layout_marginBottom="144dp"
+        android:src="@drawable/fish1" />
 
     <EditText
         android:id="@+id/searchBar"
-        android:layout_width="wrap_content"
+        android:layout_width="96dp"
         android:layout_height="wrap_content"
         android:hint="Search" />
 
     <ListView
         android:id="@+id/list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </ListView>
+        android:layout_width="wrap_content"
+        android:layout_height="195dp"
+        android:layout_alignStart="@+id/gallery"
+        android:layout_alignTop="@+id/gallery"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-5dp"
+        android:layout_marginTop="-264dp"
+        android:layout_marginBottom="360dp"></ListView>
 </RelativeLayout>
 

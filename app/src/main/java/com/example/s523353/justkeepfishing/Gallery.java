@@ -42,8 +42,8 @@ private ListView listSearch;
     private Integer[] images={R.drawable.fish1,R.drawable.fish2,R.drawable.fish3,
             R.drawable.fish4,R.drawable.fish5,R.drawable.fish6, R.drawable.fish7, R.drawable.fish8};
 
-    File path = new File(Environment.getExternalStorageDirectory(), "DCIM/Camera");
-    String[] fileNames;
+    //File path = new File(Environment.getExternalStorageDirectory(), "DCIM/Camera");
+    //String[] fileNames;
 
 
     private ImageView imageview;
@@ -81,7 +81,7 @@ private ListView listSearch;
 //        {
             //fileNames = path.list();
 //        }
-        Log.d("images path",path.getPath()+"length "+path.listFiles().length);
+        //Log.d("images path",path.getPath()+"length "+path.listFiles().length);
 //        Log.d("images path",path.list().toString());
 
 //        for (int i = 0; i < fileNames.length; i++)
