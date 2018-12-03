@@ -4,6 +4,7 @@ import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -39,11 +40,16 @@ private ListView listSearch;
     //leave the ArrayList empty, it should get bigger as we take more pictures
     //could possibly keep the stock images we have just to shorten the presentation
     //Should use a GridView for gallery
+    //Bitmap mBitmap = null;
     private Integer[] images={R.drawable.fish1,R.drawable.fish2,R.drawable.fish3,
             R.drawable.fish4,R.drawable.fish5,R.drawable.fish6, R.drawable.fish7, R.drawable.fish8};
 
-    //File path = new File(Environment.getExternalStorageDirectory(), "DCIM/Camera");
-    //String[] fileNames;
+    File path = new File(Environment.getExternalStorageDirectory(), "DCIM/Camera");
+
+
+
+
+    String[] fileNames;
 
 
     private ImageView imageview;
@@ -53,6 +59,18 @@ private ListView listSearch;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (path != null)
+        {
+            Log.d("images path","path "+path.toString()+" exists "+path.getPath());
+        }
+        else
+
+        {
+            Log.d("images path", "Path is null");
+        }
+
+
         setContentView(R.layout.activity_gallary);
         listSearch = (ListView)findViewById(R.id.list);
         editSearch = (EditText)findViewById(R.id.searchBar);
@@ -76,27 +94,31 @@ private ListView listSearch;
         });
         Intent intent = getIntent();
 
-//        if (path.exists())
-//
-//        {
-            //fileNames = path.list();
-//        }
-        //Log.d("images path",path.getPath()+"length "+path.listFiles().length);
-//        Log.d("images path",path.list().toString());
+        if (path.exists())
 
-//        for (int i = 0; i < fileNames.length; i++)
-//
-//        {
-//
-////            Bitmap mBitmap = Bitmap.decodeFile(path.getPath() + "/" + fileNames[i]);
-//            ///Now set this bitmap on imageview
-//        }
+        {
+            fileNames = path.list();
+            //Log.d("images path","path "+path.toString()+" exists "+path.getPath());
+        }
+//        Log.d("images path","path "+path.toString()+" does not exist "+path.getPath());
+//        Log.d("images path",path.getPath()+"length "+path.listFiles().length);
+//        Log.d("images path",path.list().toString());
+        Bitmap mBitmap = null;
+        for (int i = 0; i < fileNames.length; i++) {
+
+
+            //Bitmap.
+            mBitmap = BitmapFactory.decodeFile(path.getPath() + "/" + fileNames[0]);
+            ///Now set this bitmap on imageview
+        }
+
 
 
         android.widget.Gallery imgGallery = (android.widget.Gallery) findViewById(R.id.gallery);
 
         imgGallery.setAdapter(new ImageAdapter(this));
         imageview = (ImageView) findViewById(R.id.imageView);
+        imageview.setImageBitmap(mBitmap);
         imgGallery.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
@@ -146,4 +168,5 @@ private ListView listSearch;
     }
 
 }
+
 
