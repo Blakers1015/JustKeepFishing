@@ -45,18 +45,7 @@ public class MainActivity extends AppCompatActivity {
         Intent camera = new Intent(this,Search.class);
         startActivityForResult(camera,2);
     }
-// use setImageBitmap (bitmap bm) set bitmap as content of image view
 
-//    File path = new File(Environment.getExternalStorageDirectory(),"DCIM/Camera"); DCIM/Camera is the default storage for pictures
-//if(path.exists())
-//    {
-//        String[] fileNames = path.list();
-//    }
-//for(int i = 0; i < filename.length; i++)
-//    {
-//        Bitmap mBitmap = Bitmap.decodeFile(path.getPath()+"/"+ fileNames[i]);
-//        ///Now set this bitmap on imageview
-//    }
 }
 
 

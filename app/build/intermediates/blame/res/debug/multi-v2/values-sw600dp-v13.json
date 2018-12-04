@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\S530258\\Documents\\JustKeepFishing\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+            "outputFile": "C:\\Users\\s523353\\Documents\\GitHub\\LatestWorkingCopy\\JustKeepFishing\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\S530258\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\4fc4019699c426d50659971a04ab23e6\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\s523353\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\2b66ca7391463eccdcbb0b53322965d9\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\S530258\\Documents\\JustKeepFishing\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "C:\\Users\\s523353\\Documents\\GitHub\\LatestWorkingCopy\\JustKeepFishing\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\S530258\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\4fc4019699c426d50659971a04ab23e6\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\s523353\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\2b66ca7391463eccdcbb0b53322965d9\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",

@@ -2,6 +2,7 @@ package com.example.s523353.justkeepfishing;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Environment;
@@ -40,7 +41,7 @@ public class Gallery extends AppCompatActivity {
     String [] fileNames;
 
 
-    String data[] = {"bluegill", "bass", "carp", "pike"};
+    String data[] = {"bluegill", "bluegill2", "bass", "bass2", "carp", "carp2", "pike", "pike2"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +51,13 @@ public class Gallery extends AppCompatActivity {
         editSearch = (EditText)findViewById(R.id.searchBar);
         adapter = new ArrayAdapter<String>(this, R.layout.activity_search, R.id.searchText, data);
         listSearch.setAdapter(adapter);
+        listSearch.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(Gallery.this,data[position],Toast.LENGTH_SHORT).show();
+            }
+        });
         editSearch.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -88,7 +96,9 @@ public class Gallery extends AppCompatActivity {
                 imageview.setImageResource(images[arg2]);
             }
         });
+
     }
+
 
 
     public class ImageAdapter extends BaseAdapter {
@@ -126,6 +136,8 @@ public class Gallery extends AppCompatActivity {
             return imageView;
         }
     }
+
+
 
 }
 
