@@ -10,35 +10,37 @@
     android:paddingTop="16dp"
     tools:context=".Gallery">
 
-    <EditText
-        android:id="@+id/searchBar"
-        android:layout_width="148dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:hint="Search" />
+    <Gallery
+        android:id="@+id/gallery"
+        android:layout_width="341dp"
+        android:layout_height="323dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"/>
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_centerInParent="true"
-        android:src="@drawable/fish1" />
-
-    <Gallery
-        android:id="@+id/gallery"
-        android:layout_width="340dp"
-        android:layout_height="343dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="12dp" />
+        android:layout_marginBottom="3dp"
+        android:layout_toEndOf="@+id/searchBar"
+        android:src="@drawable/bluegill"/>
+
+    <EditText
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:id="@id/searchBar"
+        android:hint="Search"
+        />
 
     <ListView
         android:id="@+id/list"
         android:layout_width="338dp"
         android:layout_height="162dp"
+        android:layout_alignStart="@+id/gallery"
         android:layout_alignTop="@+id/searchBar"
         android:layout_centerHorizontal="true"
-        android:dividerHeight="8dip"></ListView>
+        ></ListView>
 </RelativeLayout>
 

@@ -2,7 +2,7 @@ package com.example.s523353.justkeepfishing;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-;
+
 import android.graphics.Bitmap;
 import android.os.Environment;
 import android.provider.MediaStore;
